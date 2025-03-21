@@ -1,0 +1,33 @@
+# Dependências
+node_modules/
+.pnpm-store/
+
+# Compilados
+dist/
+build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cobertura de testes
+coverage/
+
+# Diretórios de IDEs/editores
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Sistema operacional
+.DS_Store
+Thumbs.db

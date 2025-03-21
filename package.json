@@ -1,0 +1,51 @@
+{
+  "name": "node-api-scaffold",
+  "version": "0.1.0",
+  "description": "Scaffold para APIs Node.js com TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "dev": "NODE_ENV=development tsx watch src/index.ts",
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch",
+    "test:coverage": "NODE_ENV=test jest --coverage",
+    "format": "biome format --write .",
+    "lint": "biome check --apply .",
+    "format:check": "biome format .",
+    "lint:check": "biome check ."
+  },
+  "keywords": ["scaffold", "node", "typescript", "koa", "api"],
+  "author": "Moises Jr",
+  "dependencies": {
+    "@koa/cors": "^5.0.0",
+    "@koa/router": "^12.0.1",
+    "dotenv": "^16.4.7",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.15.0",
+    "koa-bodyparser": "^4.4.1",
+    "koa-helmet": "^7.0.2",
+    "koa-logger": "^3.2.1",
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.6.3",
+    "@swc/core": "^1.4.8",
+    "@swc/jest": "^0.2.36",
+    "@types/jest": "^29.5.12",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/koa": "^2.15.0",
+    "@types/koa__cors": "^5.0.0",
+    "@types/koa__router": "^12.0.4",
+    "@types/koa-bodyparser": "^4.3.12",
+    "@types/koa-logger": "^3.1.5",
+    "@types/node": "^20.8.0",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.5"
+  }
+}

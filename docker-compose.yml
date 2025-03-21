@@ -1,0 +1,38 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    command: pnpm dev
+    
+  # Adicione outros serviços conforme necessário
+  # Por exemplo: banco de dados, cache, etc.
+  
+  # Exemplo de configuração para MongoDB:
+  # database:
+  #   image: mongo:latest
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - mongodb_data:/data/db
+  
+  # Exemplo de configuração para PostgreSQL:
+  # database:
+  #   image: postgres:latest
+  #   environment:
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=postgres
+  #     - POSTGRES_DB=app
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - postgresql_data:/var/lib/postgresql/data
+
+# volumes:
+#   mongodb_data:
+#   postgresql_data:
