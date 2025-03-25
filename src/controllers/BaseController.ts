@@ -1,7 +1,7 @@
 import type { Context } from 'koa';
 import { AppError, STATUS_CODE } from '../errors/AppError';
-import type { Entity } from '../types/IBaseEntity';
 import type { BaseService } from '../services/BaseService';
+import type { Entity } from '../types/IBaseEntity';
 
 export abstract class BaseController<T extends Entity> {
   constructor(protected service: BaseService<T>) {}

@@ -1,12 +1,12 @@
+import cors from '@koa/cors';
 import 'dotenv/config';
 import Koa from 'koa';
-import cors from '@koa/cors';
 import bodyParser from 'koa-bodyparser';
 import helmet from 'koa-helmet';
-import { errorMiddleware } from './middlewares/errorMiddleware';
-import router from './routes';
 import { logger } from './config/logger';
 import { database } from './database';
+import { errorMiddleware } from './middlewares/errorMiddleware';
+import router from './routes';
 
 const app = new Koa();
 const PORT = process.env.PORT || 3000;

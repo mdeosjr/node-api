@@ -1,6 +1,6 @@
-import { Context, Next } from 'koa';
-import { AppError, STATUS_CODE } from '../errors/AppError';
+import type { Context, Next } from 'koa';
 import logger from '../config/logger';
+import { AppError, STATUS_CODE } from '../errors/AppError';
 
 export const errorMiddleware = async (ctx: Context, next: Next): Promise<void> => {
   try {

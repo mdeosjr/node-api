@@ -16,6 +16,6 @@ export class AppError extends Error {
     public statusCode: STATUS_CODE
   ) {
     super(message);
-    this.name = "AppError";
+    this.name = 'AppError';
   }
 }

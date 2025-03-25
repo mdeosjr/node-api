@@ -1,4 +1,4 @@
-import type { Entity } from "./IBaseEntity";
+import type { Entity } from './IBaseEntity';
 
 export interface Repository<T extends Entity> {
   findAll(): Promise<T[]>;

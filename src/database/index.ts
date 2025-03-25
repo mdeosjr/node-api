@@ -16,7 +16,7 @@ class Database {
     //Simulate connection
     this.db = {
       connect: async () => {
-        logger.info("Database connection established!")
+        logger.info('Database connection established!');
       },
       disconnect: async () => {},
       isConnected: (): boolean => {

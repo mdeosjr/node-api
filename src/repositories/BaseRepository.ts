@@ -1,6 +1,6 @@
 import { AppError, STATUS_CODE } from '../errors/AppError';
-import type { Repository } from '../types/IRepository';
 import type { Entity } from '../types/IBaseEntity';
+import type { Repository } from '../types/IRepository';
 
 export abstract class BaseRepository<T extends Entity> implements Repository<T> {
   protected abstract entityName: string;
