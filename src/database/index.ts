@@ -1,3 +1,4 @@
+import logger from '@/config/logger';
 import type { DatabaseConnection } from './connection';
 
 class Database {
@@ -12,15 +13,17 @@ class Database {
   }
 
   async connect(): Promise<void> {
+    //Simulate connection
     this.db = {
       connect: async () => {
-        throw new Error('Conexão com o banco de dados falhou');
+        logger.info("Database connection established!")
       },
       disconnect: async () => {},
       isConnected: (): boolean => {
         return false;
       },
     };
+
     await this.db.connect();
   }
 
