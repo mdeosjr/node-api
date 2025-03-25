@@ -1,6 +1,6 @@
-# Node API Scaffold
+# Node API Boilerplate
 
-Uma estrutura base (scaffold) para APIs Node.js utilizando TypeScript, Koa e boas práticas de desenvolvimento.
+Uma estrutura base para APIs Node.js utilizando TypeScript, Koa e boas práticas de desenvolvimento.
 
 ## 🚀 Propósito
 
@@ -57,13 +57,14 @@ Este projeto fornece uma base sólida para iniciar rapidamente o desenvolvimento
 
 ## 🚀 Como Usar
 
-### Pré-requisitos
+### Opção 1: Desenvolvimento Local
+
+#### Pré-requisitos
 
 - Node.js 18+
 - pnpm 8+
-- Docker (opcional, para ambiente com contêineres)
 
-### Instalação
+#### Instalação
 
 1. Clone este repositório ou use-o como template
 2. Instale as dependências:
@@ -72,7 +73,7 @@ Este projeto fornece uma base sólida para iniciar rapidamente o desenvolvimento
 pnpm install
 ```
 
-### Desenvolvimento
+#### Desenvolvimento
 
 ```bash
 # Iniciar em modo de desenvolvimento
@@ -91,7 +92,7 @@ pnpm format:check
 pnpm format
 ```
 
-### Testes
+#### Testes
 
 ```bash
 # Executar todos os testes
@@ -104,27 +105,23 @@ pnpm test:watch
 pnpm test:coverage
 ```
 
-### Construção e Execução em Produção
+### Opção 2: Utilizando Docker
 
-```bash
-# Construir o projeto
-pnpm build
+#### Pré-requisitos
 
-# Executar em produção
-pnpm start
-```
+- Docker
 
-### Utilizando Docker
+> **Nota**: Utilizando Docker, você não precisa ter Node.js ou pnpm instalados localmente.
+
+#### Desenvolvimento com Docker
 
 ```bash
 # Iniciar serviços definidos no docker-compose.yml
+# Este comando constrói a imagem automaticamente na primeira execução
 docker compose up
 
-# Construir a imagem
-docker build -t node-api-scaffold .
-
-# Executar contêiner
-docker run -p 3000:3000 node-api-scaffold
+# Se você fez alterações no Dockerfile ou precisa reconstruir a imagem:
+docker compose up --build
 ```
 
 ## 🧩 Customização
